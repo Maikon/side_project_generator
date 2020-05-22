@@ -1,6 +1,4 @@
-# Side Project Generator
-
-[Website](https://www.sideproject-generator.com).
+# [Side Project Generator](https://www.sideproject-generator.com)
 
 A tool to generate your next coding project.
 
