@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Side Project Generator</title>
+    <link href="styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A tool to generate your next programming side project">
+    <meta name="keywords" content="Coding, Side Project, Project, Programming, Learning, Tutorials, Computer Science">
+    <meta name="author" content="Makis Otman">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
+    <script async defer data-domain="sideproject-generator.com" src="https://plausible.io/js/plausible.js"></script>
+  </head>
+  <body>
+    <h1><span class="title">Side Project Generator</span></h1>
+    <h2>
+      Generate your next coding project &#129299<br />
+      <br />
+      <strong>Note:</strong> some projects may be in a specific language but you can try doing them in a language you like!
+    </h2>
+    <div id="project-generation">
+      <span>&#9758 </span><button id="generate-project">Generate!</button> <span>&#9756</span>
+      <p id="new-project"></p>
+    </div>
+    <div class="footer">
+      <h4>Special thanks to the people that created the following resources:</h4>
+      <ul>
+        <li><a href="https://dev.to/samborick/100-project-ideas-oda">100+ Project Ideas</a></li>
+        <li><a href="https://github.com/tuvtran/project-based-learning">Project Based Learning</a></li>
+        <li><a href="https://github.com/danistefanovic/build-your-own-x">Build Your Own X</a></li>
+        <li><a href="https://programmingpraxis.com/contents/themes">Programming Praxis</a></li>
+        <li><a href="http://matt.might.net/articles/what-cs-majors-should-know/">Matt Might's "What every computer science major should know"</a></li>
+        <li><a href="https://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/">Martyr2's Mega Project Ideas List!</a></li>
+      </ul>
+      <p>Created by <a href="https://twitter.com/makisotman">Makis Otman</a></p>
+      <p><a href="https://github.com/Maikon/side_project_generator">Source Code</a></p>
+    </div>
+    <script type="text/javascript" src="projects.js"></script>
+    <script>
+     document.getElementById("generate-project").addEventListener(
+       "click",
+       function() {
+         let project = projects[Math.floor(Math.random() * projects.length)];
+         let link = document.getElementById('new-project')
+
+         if (project.link !== "") {
+           link.innerHTML = `
+             <a href="${project.link}" target="_blank">${project.title}</a>
+           `;
+         } else {
+           link.innerHTML = `${project.title}`;
+         };
+       }
+     );
+    </script>
+  </body>
+</html>

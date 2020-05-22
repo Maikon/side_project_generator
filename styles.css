@@ -1,0 +1,59 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: 'Bungee', cursive;
+  text-align: center;
+  color: black;
+  background: #f2dcb1;
+}
+
+h1 {
+  display: block;
+  font-family: 'Bungee Shade', cursive;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+p {
+  color: #008c41;
+}
+
+.title {
+  font-weight: bolder;
+  color: #008c41;
+  letter-spacing: -6.7px;
+  text-transform: uppercase;
+  font-size: 54px;
+  padding: 0 16px;
+}
+
+button {
+  padding: 10px;
+  font-size: 24px;
+}
+
+#new-project {
+  margin-top: 20px;
+  font-size: 44px;
+}
+
+#project-generation {
+  font-size: 55px;
+}
+
+#project-generation span {
+  margin-top: 70px;
+}
+
+ul li {
+  list-style-type: none;
+}
